@@ -1,0 +1,371 @@
+@font-face {
+  font-family: 'cyberpunk';
+  src: url(./Cyberpunk_RUS_BY_LYAJKA.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  font-family: 'cyberpunk';
+}
+
+body {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+
+}
+
+button {
+  font-weight: 700;
+  line-height: 21px;
+  border: none;
+  height: 40px;
+  width: 140px;
+  border-radius: 40px;
+  color: #000;
+  background-color: #FEFE01;
+  margin: 40px 0;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: 0.3s all ease;
+  box-shadow: 0px 25px 40px 0px rgba(254, 254, 1, 0.397);
+  font-family: 'Inter', sans-serif;
+}
+
+/* ---------------------------------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background: url(./bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+button:hover {
+  transform: scale(1.1);
+  transition: 0.2s all ease;
+}
+
+h2 {
+  text-align: center;
+  margin-top: -30px;
+  font-size: 1.8em;
+  color: #fff;
+  text-shadow: rgb(255, 255, 255) 1px 0 10px;
+}
+
+.title {
+
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 90px;
+  line-height: 73px;
+  color: #FEFE01;
+
+}
+
+.btn-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+
+}
+
+.btn-wrap .line {
+  width: 40%;
+  height: 1px;
+  background: #fff;
+}
+
+.img-container {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  text-align: center;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.bluredEl {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  backdrop-filter: blur(11px);
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.winner-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #000;
+  background-color: #FBE900;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 13px#ffffff;
+
+}
+
+/* ------------------------------------------------------------------------------------------------------ */
+
+.user-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: space-between;
+  justify-content: center;
+  margin: 30px auto;
+  max-width: 1400px;
+}
+
+.user {
+  color: #ffffff;
+  border-radius: 20px;
+  box-shadow: -0.5px 0px 1px 1px rgb(255, 255, 255);
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+  width: 220px;
+  height: 140px;
+  transition: 0.2s;
+  background: rgba(0, 0, 0, 0.30);
+  backdrop-filter: blur(15px);
+}
+
+
+.info {
+  margin-top: 5px;
+
+}
+
+.info .number {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 0.8em;
+
+}
+
+.info .name {
+  margin: 5px;
+  letter-spacing: 1px;
+  font-size: 16px;
+  white-space: nowrap;
+  font-family: 'Inter', sans-serif;
+}
+
+.info .level {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+
+
+.user:hover {
+  box-shadow: 0 3px 15px rgb(202, 202, 202);
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+.highlight {
+  box-shadow: 0 0px 20px#fff, 0 0px 20px#fff, 0 0px 20px#fff;
+}
+
+.repeatButton {
+  z-index: 2;
+  opacity: 1;
+  top: 68%;
+  transform: translateX(50%);
+  margin-top: 10%;
+  position: fixed !important;
+  -webkit-animation: scale-in-center2 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: scale-in-center2 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  width: 140px;
+  height: 40px;
+}
+
+.winner {
+  z-index: 2;
+  border: 1px solid white;
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.30);
+  backdrop-filter: blur(15px);
+  position: fixed !important;
+  transform: translateY(-50%) translateX(-50%) scale(1);
+  -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  width: 700px;
+  height: 400px;
+  text-align: center;
+}
+
+.winner h1 {
+  color: #FBE900;
+  font-weight: 500;
+  font-size: 70px;
+  margin: 0;
+}
+
+
+.winner-title {
+  font-size: 1em;
+  text-align: center;
+}
+
+.winners {
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  position: fixed !important;
+  -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  display: none;
+}
+
+.winners .winner {
+  position: static !important;
+  transform: translateX(0) translateY(0);
+  animation: scale-in-center3 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  height: 300px;
+  width: 430px;
+  z-index: 3;
+  opacity: 1;
+}
+
+
+.winners .winner h1 {
+  font-size: 25px;
+}
+
+.type {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.btn-wrap {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.img-winner {
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  margin-top: 30px;
+}
+
+.winner .info {
+  color: white;
+  font-size: 25px;
+}
+
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+    display: block;
+  }
+
+  100% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: translateY(-50%) translateX(-50%) scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: translateY(-50%) translateX(-50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-center3 {
+  0% {
+    -webkit-transform: scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+@-webkit-keyframes scale-in-center2 {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-center2 {
+  0% {
+    -webkit-transform: scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+}
