@@ -3,7 +3,7 @@ const btn = document.getElementById('btn')
 const winners = document.querySelector('.winners')
 const btnPrelation = 'start'
 const getUsers = () => {
-    fetch('https://geeksadmin.pythonanywhere.com/api/users/')
+    fetch('API KEY')
     .then(res => res.json())
     .then(data => {
         users = data
